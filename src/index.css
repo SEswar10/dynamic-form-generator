@@ -1,0 +1,87 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  @apply bg-gray-100;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Card style for the form */
+form {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input fields (text and email) */
+input[type="text"],
+input[type="email"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Button Styles */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Error message styling */
+span.text-red-500 {
+  font-size: 0.875rem;
+  color: #f44336;
+}
+
+/* Heading style */
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"], input[type="email"], button[type="submit"] {
+    padding: 0.5rem;
+  }
+}
+
+/* Tailwind Animations for smooth transitions */
+button[type="submit"] {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  @apply transition-all duration-300 ease-in-out;
+}
